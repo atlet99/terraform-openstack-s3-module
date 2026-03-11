@@ -9,7 +9,7 @@ This module provides a convenient way to create and manage an OpenStack Object S
 ```hcl
 module "s3-module" {
   source  = "atlet99/s3-module/openstack"
-  version = "1.0.0"
+  version = "1.0.1"
 
   region           = "RegionOne"
   account_metadata = {
@@ -37,7 +37,7 @@ Create an account and multiple containers with specific configurations.
 ```hcl
 module "s3_complete" {
   source  = "atlet99/s3-module/openstack"
-  version = "1.0.0"
+  version = "1.0.1"
 
   region = "RegionOne"
   account_metadata = {
