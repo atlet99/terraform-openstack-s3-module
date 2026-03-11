@@ -4,8 +4,21 @@ This module provides a convenient way to create and manage an OpenStack Object S
 
 ## Example Usage
 
-### Simple
-Create just an account with some metadata.
+### Simple (Registry)
+
+```hcl
+module "s3-module" {
+  source  = "atlet99/s3-module/openstack"
+  version = "1.0.0"
+
+  region           = "RegionOne"
+  account_metadata = {
+    Temp-Url-Key = "my-secret-key"
+  }
+}
+```
+
+### Simple (Development)
 
 ```hcl
 module "s3" {
@@ -23,7 +36,8 @@ Create an account and multiple containers with specific configurations.
 
 ```hcl
 module "s3_complete" {
-  source = "../../"
+  source  = "atlet99/s3-module/openstack"
+  version = "1.0.0"
 
   region = "RegionOne"
   account_metadata = {

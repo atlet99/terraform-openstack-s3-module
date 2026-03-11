@@ -43,6 +43,7 @@ resource "openstack_objectstorage_container_v1" "this" {
 # EC2 credentials for S3 API access
 resource "openstack_identity_ec2_credential_v3" "this" {
   count      = var.create && var.create_ec2_credentials ? 1 : 0
+  region     = var.region
   project_id = var.project_id
   user_id    = var.s3_user_id
 }
