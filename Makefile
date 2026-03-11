@@ -7,7 +7,7 @@ CURRENT_VERSION := $(shell git describe --tags --abbrev=0 2>/dev/null | sed 's/^
 DATE := $(shell date +%Y-%m-%d)
 
 # Repository URL
-REPO_URL := https://github.com/atlet99/terraform-openstack-network-module
+REPO_URL := https://github.com/atlet99/terraform-openstack-s3-module
 
 # Required binaries
 REQUIRED_BINS := terraform tflint terraform-docs git git-cliff tfenv

@@ -36,9 +36,10 @@ module "s3" {
     "archive-data" = {
       storage_policy = var.storage_policy
     }
-    # Динамическое имя с префиксом
+    # Dynamic name with prefix
     "backups" = {
-      name_prefix = "db-backup-"
+      name_prefix   = "db-backup-"
+      storage_class = "SSD" # Requires provider >= 3.1.0
       metadata = {
         type = "backup"
       }
